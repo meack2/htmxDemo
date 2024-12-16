@@ -1,12 +1,13 @@
 from flask import Flask, render_template, request
-#from wtforms import Form, BooleanField, StringField, validators
 
 app = Flask(__name__)
 
+# This is the main page of the website
 @app.route('/', methods=['GET', 'POST'])
 def index():
     return render_template('index.html')
 
+# This is the page the endpoint which calculates the result from the selected state
 @app.route('/get_cities')
 def get_cities():
     state = request.args.get('state')

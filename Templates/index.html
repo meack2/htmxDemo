@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hello World Example</title>
+    // This is the htmx library that we are using to make the AJAX request
     <script src="https://unpkg.com/htmx.org@1.6.1"></script>
   </head>
   <body>
     <b>Hello World</b>
     <form>
+      // This is the select dropdown that will trigger the AJAX request
         <select name="state" hx-get="/get_cities" hx-target="#cities">
           <option value="CA">California</option>
           <option value="NY">New York</option>
